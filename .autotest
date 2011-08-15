@@ -1,0 +1,6 @@
+require 'autotest/restart'
+require 'autotest/growl'
+
+Autotest.add_hook :initialize do |tests|
+  %w(Gemfile Rakefile .git).each { |path| tests.add_exception(path) }
+end
