@@ -1,5 +1,5 @@
 $: << File.dirname(__FILE__) + '/lib'
-require 'paerclip/heroku/version'
+require 'paperclip/heroku/version'
 
 Gem::Specification.new do |gem|
   # General info
