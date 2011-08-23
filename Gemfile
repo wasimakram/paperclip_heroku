@@ -6,6 +6,10 @@ group :development, :test do
   gem 'rake'
   gem 'rspec'
   gem 'autotest'
-  gem 'autotest-fsevent', :require => 'autotest/fsevent'
-  gem 'autotest-growl',   :require => 'autotest/growl'
+  
+  # OS X specifics
+  if RUBY_PLATFORM =~ /darwin/
+    gem 'autotest-fsevent', :require => 'autotest/fsevent' 
+    gem 'autotest-growl',   :require => 'autotest/growl'
+  end
 end
